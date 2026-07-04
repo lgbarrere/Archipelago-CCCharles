@@ -140,9 +140,9 @@ class CCCharlesWorld(World):
             case "Purple Paint Can":
                 classification = ItemClassification.filler
             case "The Boomer":
-                classification = ItemClassification.filler
+                classification = ItemClassification.useful
             case "Bob":
-                classification = ItemClassification.filler
+                classification = ItemClassification.useful
             case "Green Egg":
                 classification = ItemClassification.progression
             case "Blue Egg":
@@ -243,6 +243,18 @@ class CCCharlesWorld(World):
                 classification = ItemClassification.progression
             case "Fogbane Relic - Morse Bunker":
                 classification = ItemClassification.progression
+            case "Speed blueprint":
+                classification = ItemClassification.useful
+            case "Damage blueprint":
+                classification = ItemClassification.useful
+            case "Armor blueprint":
+                classification = ItemClassification.useful
+            case "Speed fragment":
+                classification = ItemClassification.useful
+            case "Damage fragment":
+                classification = ItemClassification.useful
+            case "Armor fragment":
+                classification = ItemClassification.useful
             case _: # Should not occur
                 raise InvalidItemError("Unexpected case met: classification cannot be set for unknown item \"" + name + "\"")
 
@@ -305,6 +317,24 @@ class CCCharlesWorld(World):
             full_item_list += ["Fogbane Relic - Pickle Val"] * 1
             full_item_list += ["Fogbane Relic - Morse Bunker"] * 1
             number_of_scraps -= 34
+        if self.options.speed_blueprint_fragments == "blueprints":
+            full_item_list += ["Speed blueprint"] * 1
+            number_of_scraps -= 1
+        elif self.options.speed_blueprint_fragments == "fragments":
+            full_item_list += ["Speed fragments"] * 9
+            number_of_scraps -= 9
+        if self.options.damage_blueprint_fragments == "blueprints":
+            full_item_list += ["Damage blueprint"] * 1
+            number_of_scraps -= 1
+        elif self.options.damage_blueprint_fragments == "fragments":
+            full_item_list += ["Damage fragments"] * 9
+            number_of_scraps -= 9
+        if self.options.armor_blueprint_fragments == "blueprints":
+            full_item_list += ["Armor blueprint"] * 1
+            number_of_scraps -= 1
+        elif self.options.armor_blueprint_fragments == "fragments":
+            full_item_list += ["Armor fragments"] * 9
+            number_of_scraps -= 9
 
         full_item_list += ["Scraps"] * number_of_scraps
         full_item_list += ["30 Scraps Reward"] * 3
@@ -362,6 +392,9 @@ class CCCharlesWorld(World):
             "world_version": self.world_version.as_simple_string(), # See archipelago.json: check mod<->apworld compliance
             "TrackSwitches": self.options.track_switches.value,
             "CursedFogs": self.options.cursed_fogs.value,
+            "SpeedBlueprintFragments": self.options.speed_blueprint_fragments.value,
+            "DamageBlueprintFragments": self.options.damage_blueprint_fragments.value,
+            "ArmorBlueprintFragments": self.options.armor_blueprint_fragments.value,
             "DeathLink": self.options.death_link.value
         }
         return slot_data

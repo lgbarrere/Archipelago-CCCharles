@@ -37,7 +37,13 @@ optional_items = {
     "Track Switch - North or Temple": base_id + 48, # RailDirectionSwitcher5_14
     "Track Switch - Caravan or Cultists": base_id + 49, # RailDirectionSwitcher2_5
     "Track Switch - Camp or Elevator": base_id + 50, # RailDirectionSwitcher3_8
-    "Track Switch - Ruin or Temple": base_id + 51 # RailDirectionSwitcher4_11
+    "Track Switch - Ruin or Temple": base_id + 51, # RailDirectionSwitcher4_11
+    "Speed blueprint": base_id + 87,
+    "Damage blueprint": base_id + 88,
+    "Armor blueprint": base_id + 89,
+    "Speed fragment": base_id + 90,
+    "Damage fragment": base_id + 91,
+    "Armor fragment": base_id + 92
 }
 
 useless_items = {
@@ -126,9 +132,15 @@ item_groups = {
         "30 Scraps Reward",
         "25 Scraps Reward",
         "35 Scraps Reward",
-        "40 Scraps Reward"
+        "40 Scraps Reward",
+        "Speed blueprint",
+        "Damage blueprint",
+        "Armor blueprint",
+        "Speed fragment",
+        "Damage fragment",
+        "Armor fragment"
     },
-    "Dungeon Keys": {
+    "Mine Keys": {
         "South Mine Key",
         "North Mine Key",
         "Mountain Ruin Key"
@@ -197,7 +209,7 @@ item_groups = {
         "Fogbane Relic - Pickle Val",
         "Fogbane Relic - Morse Bunker"
     },
-    "Others": {
+    "Track Switches": {
         "Track Switch Pack",
         "Track Switch - Barn or Tutorial",
         "Track Switch - Middle or Port",
