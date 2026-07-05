@@ -243,17 +243,17 @@ class CCCharlesWorld(World):
                 classification = ItemClassification.progression
             case "Fogbane Relic - Morse Bunker":
                 classification = ItemClassification.progression
-            case "Speed blueprint":
+            case "Speed Blueprint":
                 classification = ItemClassification.useful
-            case "Damage blueprint":
+            case "Damage Blueprint":
                 classification = ItemClassification.useful
-            case "Armor blueprint":
+            case "Armor Blueprint":
                 classification = ItemClassification.useful
-            case "Speed fragment":
+            case "Speed Fragment":
                 classification = ItemClassification.useful
-            case "Damage fragment":
+            case "Damage Fragment":
                 classification = ItemClassification.useful
-            case "Armor fragment":
+            case "Armor Fragment":
                 classification = ItemClassification.useful
             case _: # Should not occur
                 raise InvalidItemError("Unexpected case met: classification cannot be set for unknown item \"" + name + "\"")
@@ -318,22 +318,22 @@ class CCCharlesWorld(World):
             full_item_list += ["Fogbane Relic - Morse Bunker"] * 1
             number_of_scraps -= 34
         if self.options.speed_blueprint_fragments == "blueprints":
-            full_item_list += ["Speed blueprint"] * 1
+            full_item_list += ["Speed Blueprint"] * 1
             number_of_scraps -= 1
         elif self.options.speed_blueprint_fragments == "fragments":
-            full_item_list += ["Speed fragments"] * 9
+            full_item_list += ["Speed Fragments"] * 9
             number_of_scraps -= 9
         if self.options.damage_blueprint_fragments == "blueprints":
-            full_item_list += ["Damage blueprint"] * 1
+            full_item_list += ["Damage Blueprint"] * 1
             number_of_scraps -= 1
         elif self.options.damage_blueprint_fragments == "fragments":
-            full_item_list += ["Damage fragments"] * 9
+            full_item_list += ["Damage Fragments"] * 9
             number_of_scraps -= 9
         if self.options.armor_blueprint_fragments == "blueprints":
-            full_item_list += ["Armor blueprint"] * 1
+            full_item_list += ["Armor Blueprint"] * 1
             number_of_scraps -= 1
         elif self.options.armor_blueprint_fragments == "fragments":
-            full_item_list += ["Armor fragments"] * 9
+            full_item_list += ["Armor Fragments"] * 9
             number_of_scraps -= 9
 
         full_item_list += ["Scraps"] * number_of_scraps
