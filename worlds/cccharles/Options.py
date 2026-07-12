@@ -43,56 +43,56 @@ class CursedFogs(Choice):
     visibility = Visibility.all
 
 
-class SpeedBlueprintFragments(Choice):
+class SpeedUpgrade(Choice):
     """
-    Speed blueprint or fragments must be received to access the speed upgrade of the train.
+    The speed upgrade of the train must be unlocked or speed levels must be received.
 
     **No:** Disabled.
 
-    **Blueprint:** The speed upgrade is locked until its blueprint is received (still needs scraps to upgrade).
+    **Unlock:** The speed upgrade is locked until it is received (still needs scraps to upgrade).
 
-    **Fragments:** The speed upgrade is disabled, it freely upgrades when a fragment is received (9 in total).
+    **Levels:** The speed upgrade is disabled, it freely upgrades when a speed level is received (9 in total).
     """
-    display_name = "Speed blueprint fragments"
+    display_name = "Speed Upgrade"
     option_no = 0
-    option_blueprints = 1
-    option_fragments = 2
+    option_unlock = 1
+    option_levels = 2
     default = 0
     visibility = Visibility.all
 
 
-class DamageBlueprintFragments(Choice):
+class DamageUpgrade(Choice):
     """
-    Damage blueprint or fragments must be received to access the damage upgrade of the train.
+    The damage upgrade of the train must be unlocked or damage levels must be received.
 
     **No:** Disabled.
 
-    **Blueprint:** The damage upgrade is locked until its blueprint is received (still needs scraps to upgrade).
+    **Unlock:** The damage upgrade is locked until it is received (still needs scraps to upgrade).
 
-    **Fragments:** The damage upgrade is disabled, it freely upgrades when a fragment is received (9 in total).
+    **Levels:** The damage upgrade is disabled, it freely upgrades when a damage level is received (9 in total).
     """
-    display_name = "Damage blueprint fragments"
+    display_name = "Damage Upgrade"
     option_no = 0
-    option_blueprints = 1
-    option_fragments = 2
+    option_unlock = 1
+    option_levels = 2
     default = 0
     visibility = Visibility.all
 
 
-class ArmorBlueprintFragments(Choice):
+class ArmorUpgrade(Choice):
     """
-    Armor blueprint or fragments must be received to access the armor upgrade of the train.
+    The armor upgrade of the train must be unlocked or armor levels must be received.
 
     **No:** Disabled.
 
-    **Blueprint:** The armor upgrade is locked until its blueprint is received (still needs scraps to upgrade).
+    **Unlock:** The armor upgrade is locked until it is received (still needs scraps to upgrade).
 
-    **Fragments:** The armor upgrade is disabled, it freely upgrades when a fragment is received (9 in total).
+    **Levels:** The armor upgrade is disabled, it freely upgrades when an armor level is received (9 in total).
     """
-    display_name = "Armor blueprint fragments"
+    display_name = "Armor Upgrade"
     option_no = 0
-    option_blueprints = 1
-    option_fragments = 2
+    option_unlock = 1
+    option_levels = 2
     default = 0
     visibility = Visibility.all
 
@@ -102,7 +102,7 @@ class CCCharlesOptions(PerGameCommonOptions):
     start_inventory_from_pool: StartInventoryPool
     track_switches: TrackSwitches
     cursed_fogs: CursedFogs
-    speed_blueprint_fragments: SpeedBlueprintFragments
-    damage_blueprint_fragments: DamageBlueprintFragments
-    armor_blueprint_fragments: ArmorBlueprintFragments
+    speed_upgrade: SpeedUpgrade
+    damage_upgrade: DamageUpgrade
+    armor_upgrade: ArmorUpgrade
     death_link: DeathLink

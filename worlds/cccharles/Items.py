@@ -38,12 +38,12 @@ optional_items = {
     "Track Switch - Caravan or Cultists": base_id + 49, # RailDirectionSwitcher2_5
     "Track Switch - Camp or Elevator": base_id + 50, # RailDirectionSwitcher3_8
     "Track Switch - Ruin or Temple": base_id + 51, # RailDirectionSwitcher4_11
-    "Speed Blueprint": base_id + 87,
-    "Damage Blueprint": base_id + 88,
-    "Armor Blueprint": base_id + 89,
-    "Speed Fragment": base_id + 90,
-    "Damage Fragment": base_id + 91,
-    "Armor Fragment": base_id + 92
+    "Speed Unlock": base_id + 87,
+    "Damage Unlock": base_id + 88,
+    "Armor Unlock": base_id + 89,
+    "Speed Level": base_id + 90,
+    "Damage Level": base_id + 91,
+    "Armor Level": base_id + 92
 }
 
 useless_items = {
@@ -133,12 +133,12 @@ item_groups = {
         "25 Scraps Reward",
         "35 Scraps Reward",
         "40 Scraps Reward",
-        "Speed Blueprint",
-        "Damage Blueprint",
-        "Armor Blueprint",
-        "Speed Fragment",
-        "Damage Fragment",
-        "Armor Fragment"
+        "Speed Unlock",
+        "Damage Unlock",
+        "Armor Unlock",
+        "Speed Level",
+        "Damage Level",
+        "Armor Level"
     },
     "Mine Keys": {
         "South Mine Key",
