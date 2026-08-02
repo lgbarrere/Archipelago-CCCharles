@@ -97,6 +97,19 @@ class ArmorUpgrade(Choice):
     visibility = Visibility.all
 
 
+class StartingGun(Choice):
+    """
+    Set the starting gun among the 4 possible guns.
+    """
+    display_name = "Starting gun"
+    option_derailer = 0
+    option_bug_spray = 1
+    option_the_boomer = 2
+    option_bob = 3
+    default = 0
+    visibility = Visibility.all
+
+
 @dataclass
 class CCCharlesOptions(PerGameCommonOptions):
     start_inventory_from_pool: StartInventoryPool
@@ -105,4 +118,5 @@ class CCCharlesOptions(PerGameCommonOptions):
     speed_upgrade: SpeedUpgrade
     damage_upgrade: DamageUpgrade
     armor_upgrade: ArmorUpgrade
+    starting_gun: StartingGun
     death_link: DeathLink

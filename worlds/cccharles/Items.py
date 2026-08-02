@@ -43,7 +43,10 @@ optional_items = {
     "Armor Unlock": base_id + 89,
     "Speed Level": base_id + 90,
     "Damage Level": base_id + 91,
-    "Armor Level": base_id + 92
+    "Armor Level": base_id + 92,
+    "The Boomer": base_id + 35,
+    "Bob": base_id + 36,
+    "Derailer": base_id + 93
 }
 
 useless_items = {
@@ -57,9 +60,7 @@ useless_items = {
     "Lime Paint Can": base_id + 31,
     "Teal Paint Can": base_id + 32,
     "Red Paint Can": base_id + 33,
-    "Purple Paint Can": base_id + 34,
-    "The Boomer": base_id + 35,
-    "Bob": base_id + 36
+    "Purple Paint Can": base_id + 34
 }
 
 progression_items = {
@@ -109,7 +110,8 @@ progression_items = {
 }
 
 item_groups = {
-    "Weapons": {
+    "Guns": {
+        "Derailer",
         "Bug Spray",
         "The Boomer",
         "Bob"

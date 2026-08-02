@@ -255,6 +255,8 @@ class CCCharlesWorld(World):
                 classification = ItemClassification.useful
             case "Armor Level":
                 classification = ItemClassification.useful
+            case "Derailer":
+                classification = ItemClassification.useful
             case _: # Should not occur
                 raise InvalidItemError("Unexpected case met: classification cannot be set for unknown item \"" + name + "\"")
 
@@ -336,6 +338,16 @@ class CCCharlesWorld(World):
             full_item_list += ["Armor Level"] * 9
             number_of_scraps -= 9
 
+        # Do not add the starting gun to full_item_list
+        if self.options.starting_gun != "the_boomer":
+            full_item_list += ["The Boomer"] * 1
+        if self.options.starting_gun != "bob":
+            full_item_list += ["Bob"] * 1
+        if self.options.starting_gun != "bug_spray":
+            full_item_list += ["Bug Spray"] * 1
+        if self.options.starting_gun != "derailer":
+            full_item_list += ["Derailer"] * 1
+
         full_item_list += ["Scraps"] * number_of_scraps
         full_item_list += ["30 Scraps Reward"] * 3
         full_item_list += ["25 Scraps Reward"] * 1
@@ -370,14 +382,11 @@ class CCCharlesWorld(World):
         full_item_list += ["Teal Paint Can"] * 1
         full_item_list += ["Red Paint Can"] * 1
         full_item_list += ["Purple Paint Can"] * 1
-        full_item_list += ["The Boomer"] * 1
-        full_item_list += ["Bob"] * 1
         full_item_list += ["Green Egg"] * 1
         full_item_list += ["Blue Egg"] * 1
         full_item_list += ["Red Egg"] * 1
         full_item_list += ["Remote Explosive x8"] * 1
         full_item_list += ["Temple Key"] * 1
-        full_item_list += ["Bug Spray"] * 1
 
         self.multiworld.itempool += [self.create_item(item) for item in full_item_list]
 
@@ -395,6 +404,7 @@ class CCCharlesWorld(World):
             "SpeedUpgrade": self.options.speed_upgrade.value,
             "DamageUpgrade": self.options.damage_upgrade.value,
             "ArmorUpgrade": self.options.armor_upgrade.value,
+            "StartingGun": self.options.starting_gun.value,
             "DeathLink": self.options.death_link.value
         }
         return slot_data
